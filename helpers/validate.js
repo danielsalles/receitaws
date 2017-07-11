@@ -1,6 +1,5 @@
 'use strict'
 
-const cnpjValidate = require('cpf_cnpj')
 const isBoolean = require('lodash').isBoolean
 const isString = require('lodash').isString
 const isNull = require('lodash').isNull
