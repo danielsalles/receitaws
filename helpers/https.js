@@ -11,6 +11,14 @@ const makeAxios = opt => axios.create({
 
 const hasToken = token => token !== null
 
+const gettingURL = (cnpj, days, opt) => {
+	if(hasToken(opt.token)){
+		daysValidate(days)
+		return `/${cnpj}/days/${opt.days}`
+	}
+	return `/${cnpj}`
+}
+
 module.exports = (cnpj, days, opt) => makeAxios(opt)
-.get(hasToken(opt.token) ? `/${cnpj}/days/${opt.days}` : `/${cnpj}`)
+.get(gettingURL(cnpj, days, opt))
 .then(v => v.data)
