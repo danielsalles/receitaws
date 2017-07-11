@@ -12,11 +12,11 @@ const receitaWS = options => {
 }
 
 
-//TESTE BOBO
-//ARGUMENTO OPT
-//timeout, token
+// TESTE BOBO
+// ARGUMENTO OPT
+// timeout, token
 
-//Caso tenha token ele vá usar a premium
+// Caso tenha token ele vá usar a premium
 const opt = {
 	timeout: 5000
 }
