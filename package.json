@@ -1,0 +1,23 @@
+{
+  "name": "receitaws",
+  "version": "1.0.0",
+  "description": "receitaws",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielsalles/receitaws.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielsalles/receitaws/issues"
+  },
+  "homepage": "https://github.com/danielsalles/receitaws#readme",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4"
+  }
+}
