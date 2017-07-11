@@ -12,14 +12,7 @@ const makeAxios = opt => {
 }
 
 const hasToken = token => token !== null
-const premium = (cnpj, opt, days) => {
-	daysValidate(days)
-	return makeAxios(opt)
-			.get(`/${cnpj}/days/${opt.days}`)
-			.then(v => v.data)
-}
-const free = (cnpj, opt) => makeAxios(opt)
-							.get(`/${cnpj}`)
-							.then(v => v.data)
 
-module.exports = (cnpj, days, opt) => hasToken(opt.token) ? premium(cnpj, opt, days) : free(cnpj, opt)
+module.exports = (cnpj, days, opt) => makeAxios(opt)
+									.get(hasToken(opt.token) ? `/${cnpj}/days/${opt.days}` : `/${cnpj}`)
+									.then(v => v.data)
