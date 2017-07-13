@@ -1,5 +1,3 @@
-'use strict'
-
 const isUndefined = require('lodash').isUndefined
 
 exports.defineDefault = opt => {

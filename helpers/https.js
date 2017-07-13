@@ -1,5 +1,3 @@
-'use strict'
-
 const axios = require('axios')
 const daysValidate = require('./validate').days
 const hasToken = token => token !== null

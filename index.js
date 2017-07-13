@@ -1,5 +1,3 @@
-'use strict'
-
 const R = require('ramda')
 const https = require('./helpers/https')
 const validateOpt = require('./helpers/validate').options
