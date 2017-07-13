@@ -1,16 +1,12 @@
 'use strict'
 
+const R = require('ramda')
 const https = require('./helpers/https')
-const validate = require('./helpers/validate')
+const validateOpt = require('./helpers/validate').options
 const defineDefault = require('./helpers/utils').defineDefault
+const validateTypes = R.pipe(defineDefault, validateOpt)
 
-const receitaWS = options => {
-	const normalized = defineDefault(options)
-	validate.options(normalized)
-
-	return (cnpj, days = null) => https(cnpj, days, normalized)
-}
-
+const receitaWS = options => (cnpj, days = null) => https(cnpj, days, validateTypes(options))
 
 // TESTE BOBO
 // ARGUMENTO OPT

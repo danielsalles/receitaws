@@ -2,6 +2,7 @@
 
 const axios = require('axios')
 const daysValidate = require('./validate').days
+const hasToken = token => token !== null
 
 const makeAxios = opt => axios.create({
 	baseURL: 'https://www.receitaws.com.br/v1/cnpj/',
@@ -9,15 +10,9 @@ const makeAxios = opt => axios.create({
 	headers: hasToken(opt.token) ? {'Authorization:': opt.token} : null
 })
 
-const hasToken = token => token !== null
-
-const gettingURL = (cnpj, days, opt) => {
-	if(hasToken(opt.token)){
-		daysValidate(days)
-		return `/${cnpj}/days/${opt.days}`
-	}
-	return `/${cnpj}`
-}
+const gettingURL = (cnpj, days, opt) => hasToken(opt.token) ? 
+										`/${cnpj}/days/${daysValidate(days)}` :
+										`/${cnpj}`
 
 module.exports = (cnpj, days, opt) => makeAxios(opt)
 .get(gettingURL(cnpj, days, opt))
