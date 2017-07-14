@@ -14,4 +14,3 @@ const gettingURL = (cnpj, days, opt) => hasToken(opt.token) ?
 
 module.exports = (cnpj, days, opt) => makeAxios(opt)
 .get(gettingURL(cnpj, days, opt))
-.then(v => v.data)
