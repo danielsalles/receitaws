@@ -5,3 +5,5 @@ const defineDefault = require('./helpers/utils').defineDefault
 const validateTypes = R.pipe(defineDefault, validateOpt)
 
 const receitaWS = options => (cnpj, days = null) => https(cnpj, days, validateTypes(options))
+
+module.exports = receitaws
