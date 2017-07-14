@@ -5,7 +5,7 @@ const hasToken = token => token !== null
 const makeAxios = opt => axios.create({
 	baseURL: 'https://www.receitaws.com.br/v1/cnpj/',
 	timeout: opt.timeout,
-	headers: hasToken(opt.token) ? {'Authorization:': opt.token} : null
+	headers: hasToken(opt.token) ? {'Authorization': `Bearer ${opt.token}`} : null
 })
 
 const gettingURL = (cnpj, days, opt) => hasToken(opt.token) ? 
