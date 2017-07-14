@@ -1,17 +1,26 @@
 {
   "name": "receitaws",
-  "version": "1.0.0",
-  "description": "receitaws",
+  "version": "0.1.0",
+  "description": "Faz consulta na receitaws de forma rápida e organizada.",
   "main": "index.js",
+  "keywords": [
+    "receitaws",
+    "cnpj",
+    "brasil",
+    "brazil"
+  ],
+  "contributors": [
+    "Daniel Bastos <danielsalles@gmail.com>"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danielsalles/receitaws.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Bastos <danielsalles@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/danielsalles/receitaws/issues"
   },
@@ -20,5 +29,6 @@
     "axios": "^0.16.2",
     "lodash": "^4.17.4",
     "ramda": "^0.24.1"
-  }
+  },
+  "devDependencies": {}
 }
