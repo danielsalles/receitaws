@@ -40,4 +40,4 @@ O retorno de ambos é realizado no formato do [axios](https://github.com/mzabris
 # API:
 * receitaws() - Aceita o parametro opt que é um objeto.
 * parametro opt - Aceita dois elementos: `timeout` e `token`. E `token` é obrigatório caso queira fazer uma pesquisa premium.
-* instance() - Aceita dois parametros: `CNPJ` e `days`. `CNPJ` deve ser passado string com os numeros, e o `days` deve ser passado um Number.
+* instance() - Aceita dois parametros: `CNPJ` e `days`. `CNPJ` deve ser passado string com os numeros, e o `days` deve ser passado um Number. E `days` é obrigatorio em caso de premium.
